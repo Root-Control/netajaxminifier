@@ -25,3 +25,6 @@ Javascript tool for Net developers
             console.log(data);
         });
 ```
+   
+   # Result
+   Hello World
