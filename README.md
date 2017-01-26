@@ -2,7 +2,8 @@
 Javascript tool for Net developers
 
 # BASIC USAGE
-
+   # GET REQUEST
+   
    # CONTROLLER:
    ```C#
 
@@ -28,3 +29,53 @@ Javascript tool for Net developers
    
    # Result
    Hello World
+   
+   # POST REQUEST CREATE
+   
+   # CONTROLLER
+   ```c#
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(TODO model)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _repo.Create(model);
+                    return Json(model, JsonRequestBehavior.AllowGet);
+                }
+
+            }
+            catch
+            {
+                return View();
+            }
+        }
+```
+
+# VIEW
+```javascript
+            function create() {
+                //   Fields ID
+                var jqueryFields = ['Field1', 'Field2', 'Field3', 'Field4'];
+                var formData = fillArray(jqueryFields);
+                var config = {
+                    fields: jqueryFields,
+                    data: formData,
+                    controller: 'MyController',
+                    method: 'Create'
+                };
+                POST(config, function (message, data) {
+                    if (message === 'error') {
+                        errorMessages(data);
+                        return;
+                    }
+                    //  Code data here
+                    console.log(data);
+                });
+            }
+```
+
+# CONSOLE RESULT
+&#10148; Object
