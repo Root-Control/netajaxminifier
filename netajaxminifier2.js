@@ -15,7 +15,21 @@
             type: "GET",
             url: url,
             success: function (data) {
-                handleData('success', JSON.parse(data));
+                var isjson = true;
+                try
+                  {
+                    var json = $.parseJSON(data);
+                  }
+                  catch(err)
+                  {
+                    isjson = false;
+                  } 
+                  if(isjson) {
+                      handleData('success', json);
+                  } else {
+                      handleData('success', data);
+                  }
+
             },
             error: function (request, status, error, xhr) {
                 handleData('error', request.statusText);
@@ -31,7 +45,20 @@
                 contentType: false,
                 processData: false,
                 success: function (data) {
-                    handleData('success', JSON.parse(data));
+                var isjson = true;
+                try
+                  {
+                    var json = $.parseJSON(data);
+                  }
+                  catch(err)
+                  {
+                    isjson = false;
+                  } 
+                  if(isjson) {
+                      handleData('success', json);
+                  } else {
+                      handleData('success', data);
+                  }
                 },
                 error: function (request, status, error, xhr) {
                     alert('error');
