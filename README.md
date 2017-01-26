@@ -13,7 +13,9 @@ Javascript tool for Net developers
             }
 
    ```
-   # VIEW:        
+   # VIEW:  
+   
+   ```javascript
         var config = { controller: "MyController", method: "MyMethod", identifier: false };
         GET(config, function (message, data) {
             if (message === 'error') {
@@ -22,3 +24,4 @@ Javascript tool for Net developers
             }
             console.log(data);
         });
+```
