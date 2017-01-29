@@ -6,10 +6,7 @@ Javascript tool for Net developers
 
 # BASIC USAGE
    Reference script.
-      ```html
-   <script type="text/javascript" src="https://raw.githubusercontent.com/HiroshixD/netajaxminifier/master/netajaxminifier1.0.1.min.js"></script>
-   ```
-   # GET REQUEST
+EQUEST
 
    
    # CONTROLLER:
