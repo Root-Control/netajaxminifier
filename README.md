@@ -1,8 +1,16 @@
 # netajaxminifier
 Javascript tool for Net developers
 
+# REQUIRED PACKAGES
+   Jquery all versions
+
 # BASIC USAGE
+   Reference script.
+      ```javascript
+   <script type="text/javascript" src="https://raw.githubusercontent.com/HiroshixD/netajaxminifier/master/netajaxminifier1.0.1.min.js"></script>
+   ```
    # GET REQUEST
+
    
    # CONTROLLER:
    ```C#
