@@ -67,7 +67,8 @@ Javascript tool for Net developers
             function create() {
                 //   Jquery Fields ID
                 var fields = ['Field1', 'Field2', 'Field3', 'Field4', {'MyArrayField': MyArrayData}];
-                  var config = { fields: fields, controller: 'MyController', method: 'Create'};;
+                
+                var config = { fields: fields, controller: 'MyController', method: 'Create'};;
                 Post(config, function (message, data) {
                     if (message === 'error') {
                         errorMessages(data);
