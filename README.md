@@ -8,7 +8,7 @@ Javascript tool for Net developers
 # BASIC USAGE
    Reference script.
   ```html
-   <script type="text/javascript" src="https://rawgit.com/HiroshixD/netajaxminifier/master/netajaxminifier1.0.2.min.js"></script>
+   <script type="text/javascript" src="https://rawgit.com/HiroshixD/netajaxminifier/master/netajaxminifier1.0.3.min.js"></script>
    ```
    # GET REQUEST
    
