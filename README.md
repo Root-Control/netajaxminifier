@@ -3,11 +3,12 @@ Javascript tool for Net developers
 
 # REQUIRED PACKAGES
    Jquery all versions
+   NewtonSoft.Json
 
 # BASIC USAGE
    Reference script.
   ```html
-   <script type="text/javascript" src="https://raw.githubusercontent.com/HiroshixD/netajaxminifier/master/netajaxminifier1.0.1.min.js"></script>
+   <script type="text/javascript" src="https://rawgit.com/HiroshixD/netajaxminifier/master/netajaxminifier1.0.2.min.js"></script>
    ```
    # GET REQUEST
    
@@ -64,9 +65,9 @@ Javascript tool for Net developers
 # VIEW
 ```javascript
             function create() {
-                //   Fields ID
-                var jqueryFields = ['Field1', 'Field2', 'Field3', 'Field4'];
-                var formData = fillArray(jqueryFields);
+                //   Jquery Fields ID
+                var fields = ['Field1', 'Field2', 'Field3', 'Field4', {'MyArrayField': MyArrayData}];
+                var formData = fillArray(fields);
                 var config = {
                     fields: jqueryFields,
                     data: formData,
@@ -78,7 +79,7 @@ Javascript tool for Net developers
                         errorMessages(data);
                         return;
                     }
-                    //  Code data here
+                    //  Do Stuff here
                     console.log(data);
                 });
             }
