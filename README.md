@@ -26,7 +26,7 @@ Javascript tool for Net developers
    
    ```javascript
         var config = { controller: "MyController", method: "MyMethod", identifier: false };
-        GET(config, function (message, data) {
+        Get(config, function (message, data) {
             if (message === 'error') {
                 alert('You have the following error: ' + data);
                 return;
@@ -67,14 +67,8 @@ Javascript tool for Net developers
             function create() {
                 //   Jquery Fields ID
                 var fields = ['Field1', 'Field2', 'Field3', 'Field4', {'MyArrayField': MyArrayData}];
-                var formData = fillArray(fields);
-                var config = {
-                    fields: jqueryFields,
-                    data: formData,
-                    controller: 'MyController',
-                    method: 'Create'
-                };
-                POST(config, function (message, data) {
+                  var config = { fields: fields, controller: 'MyController', method: 'Create'};;
+                Post(config, function (message, data) {
                     if (message === 'error') {
                         errorMessages(data);
                         return;
